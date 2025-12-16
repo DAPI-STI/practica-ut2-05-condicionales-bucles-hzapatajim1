@@ -10,4 +10,16 @@ def sign(n: int) -> str:
     - "negativo" si n < 0
     - "cero" si n == 0
     """
-    raise NotImplementedError("Implementa sign(n)")
+    if n > 0:
+        return "positivo"
+    elif n < 0:
+        return "negativo"
+    else:
+        return "cero"
+
+
+# --- Pruebas ---
+if __name__ == "__main__":
+    numeros = [10, -5, 0]
+    for num in numeros:
+        print(f"El número {num} es {sign(num)}")
